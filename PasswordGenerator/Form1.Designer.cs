@@ -30,12 +30,14 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBoxCaps = new System.Windows.Forms.CheckBox();
             this.checkBoxNums = new System.Windows.Forms.CheckBox();
             this.checkBoxSymbol = new System.Windows.Forms.CheckBox();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -53,16 +55,6 @@
             this.label1.Size = new System.Drawing.Size(103, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Generator zaporke";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(225, 166);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 19);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Dulja zaporka";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBoxCaps
             // 
@@ -114,21 +106,41 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(333, 156);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(227, 45);
+            this.trackBar1.TabIndex = 8;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(222, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Duljina zaporke";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.checkBoxSymbol);
             this.Controls.Add(this.checkBoxNums);
             this.Controls.Add(this.checkBoxCaps);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,11 +150,12 @@
 
         private TextBox textBox1;
         private Label label1;
-        private CheckBox checkBox1;
         private CheckBox checkBoxCaps;
         private CheckBox checkBoxNums;
         private CheckBox checkBoxSymbol;
         private Button GenerateButton;
         private Button saveButton;
+        private TrackBar trackBar1;
+        private Label label2;
     }
 }

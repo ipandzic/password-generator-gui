@@ -7,6 +7,8 @@ namespace PasswordGenerator
         public Form1()
         {
             InitializeComponent();
+            trackBar1.Minimum = 6;
+            trackBar1.Maximum = 20;
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -14,12 +16,6 @@ namespace PasswordGenerator
             bool includeLetters = false;
             bool includeNumerals = false;
             bool includeSymbols = false;
-            int characterNumber = 8;
-
-            if (checkBox1.Checked)
-            {
-                characterNumber = 10;
-            }
 
             if (checkBoxCaps.Checked)
             {
@@ -36,7 +32,7 @@ namespace PasswordGenerator
                 includeSymbols = true;
             }
 
-            PasswordGenerator(characterNumber, includeLetters, includeNumerals, includeSymbols);
+            PasswordGenerator(trackBar1.Value, includeLetters, includeNumerals, includeSymbols);
 
         }
 
@@ -75,6 +71,15 @@ namespace PasswordGenerator
 
             PasswordWriter.WriteLine(textBox1.Text);
             PasswordWriter.Close();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
         }
     }
 }
