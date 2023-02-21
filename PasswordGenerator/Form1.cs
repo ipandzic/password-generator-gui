@@ -14,7 +14,7 @@ namespace PasswordGenerator
             bool includeCapitals = false;
             bool includeNumerals = false;
             bool includeSymbols = false;
-            int characterNumber = 6;
+            int characterNumber = 8;
 
             if (checkBox1.Checked)
             {
@@ -69,6 +69,12 @@ namespace PasswordGenerator
             textBox1.Text = result.ToString();
         }
 
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            StreamWriter PasswordWriter = new StreamWriter(Application.StartupPath + "password_text.txt");
 
+            PasswordWriter.WriteLine(textBox1.Text);
+            PasswordWriter.Close();
+        }
     }
 }
