@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox10Chars = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBoxCaps = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNums = new System.Windows.Forms.CheckBox();
+            this.checkBoxSymbol = new System.Windows.Forms.CheckBox();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxPassword
+            // textBox1
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(224, 98);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(208, 23);
-            this.textBoxPassword.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(224, 98);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(208, 23);
+            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -54,15 +54,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Password Generator";
             // 
-            // checkBox10Chars
+            // checkBox1
             // 
-            this.checkBox10Chars.AutoSize = true;
-            this.checkBox10Chars.Location = new System.Drawing.Point(225, 166);
-            this.checkBox10Chars.Name = "checkBox10Chars";
-            this.checkBox10Chars.Size = new System.Drawing.Size(117, 19);
-            this.checkBox10Chars.TabIndex = 2;
-            this.checkBox10Chars.Text = "Use 10 characters";
-            this.checkBox10Chars.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(225, 166);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(117, 19);
+            this.checkBox1.TabIndex = 2;
+            this.checkBox1.Text = "Use 10 characters";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBoxCaps
             // 
@@ -74,25 +74,25 @@
             this.checkBoxCaps.Text = "Use capital letters";
             this.checkBoxCaps.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkBoxNums
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(225, 256);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(95, 19);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Text = "Use numbers";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxNums.AutoSize = true;
+            this.checkBoxNums.Location = new System.Drawing.Point(225, 256);
+            this.checkBoxNums.Name = "checkBoxNums";
+            this.checkBoxNums.Size = new System.Drawing.Size(95, 19);
+            this.checkBoxNums.TabIndex = 4;
+            this.checkBoxNums.Text = "Use numbers";
+            this.checkBoxNums.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkBoxSymbol
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(224, 295);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(92, 19);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Use symbols";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxSymbol.AutoSize = true;
+            this.checkBoxSymbol.Location = new System.Drawing.Point(224, 295);
+            this.checkBoxSymbol.Name = "checkBoxSymbol";
+            this.checkBoxSymbol.Size = new System.Drawing.Size(92, 19);
+            this.checkBoxSymbol.TabIndex = 5;
+            this.checkBoxSymbol.Text = "Use symbols";
+            this.checkBoxSymbol.UseVisualStyleBackColor = true;
             // 
             // GenerateButton
             // 
@@ -102,6 +102,7 @@
             this.GenerateButton.TabIndex = 6;
             this.GenerateButton.Text = "Generate";
             this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // saveButton
             // 
@@ -119,12 +120,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.GenerateButton);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBoxSymbol);
+            this.Controls.Add(this.checkBoxNums);
             this.Controls.Add(this.checkBoxCaps);
-            this.Controls.Add(this.checkBox10Chars);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -134,12 +135,12 @@
 
         #endregion
 
-        private TextBox textBoxPassword;
+        private TextBox textBox1;
         private Label label1;
-        private CheckBox checkBox10Chars;
+        private CheckBox checkBox1;
         private CheckBox checkBoxCaps;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
+        private CheckBox checkBoxNums;
+        private CheckBox checkBoxSymbol;
         private Button GenerateButton;
         private Button saveButton;
     }
