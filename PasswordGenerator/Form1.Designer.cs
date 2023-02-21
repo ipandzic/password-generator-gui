@@ -50,48 +50,48 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(224, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 15);
+            this.label1.Size = new System.Drawing.Size(103, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Password Generator";
+            this.label1.Text = "Generator zaporke";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(225, 166);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 19);
+            this.checkBox1.Size = new System.Drawing.Size(97, 19);
             this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Use 10 characters";
+            this.checkBox1.Text = "Dulja zaporka";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // checkBoxCaps
             // 
             this.checkBoxCaps.AutoSize = true;
-            this.checkBoxCaps.Location = new System.Drawing.Point(224, 207);
+            this.checkBoxCaps.Location = new System.Drawing.Point(225, 209);
             this.checkBoxCaps.Name = "checkBoxCaps";
-            this.checkBoxCaps.Size = new System.Drawing.Size(118, 19);
+            this.checkBoxCaps.Size = new System.Drawing.Size(117, 19);
             this.checkBoxCaps.TabIndex = 3;
-            this.checkBoxCaps.Text = "Use capital letters";
+            this.checkBoxCaps.Text = "Mala/velika slova";
             this.checkBoxCaps.UseVisualStyleBackColor = true;
             // 
             // checkBoxNums
             // 
             this.checkBoxNums.AutoSize = true;
-            this.checkBoxNums.Location = new System.Drawing.Point(225, 256);
+            this.checkBoxNums.Location = new System.Drawing.Point(225, 252);
             this.checkBoxNums.Name = "checkBoxNums";
-            this.checkBoxNums.Size = new System.Drawing.Size(95, 19);
+            this.checkBoxNums.Size = new System.Drawing.Size(62, 19);
             this.checkBoxNums.TabIndex = 4;
-            this.checkBoxNums.Text = "Use numbers";
+            this.checkBoxNums.Text = "Brojevi";
             this.checkBoxNums.UseVisualStyleBackColor = true;
             // 
             // checkBoxSymbol
             // 
             this.checkBoxSymbol.AutoSize = true;
-            this.checkBoxSymbol.Location = new System.Drawing.Point(224, 295);
+            this.checkBoxSymbol.Location = new System.Drawing.Point(225, 294);
             this.checkBoxSymbol.Name = "checkBoxSymbol";
-            this.checkBoxSymbol.Size = new System.Drawing.Size(92, 19);
+            this.checkBoxSymbol.Size = new System.Drawing.Size(66, 19);
             this.checkBoxSymbol.TabIndex = 5;
-            this.checkBoxSymbol.Text = "Use symbols";
+            this.checkBoxSymbol.Text = "Simboli";
             this.checkBoxSymbol.UseVisualStyleBackColor = true;
             // 
             // GenerateButton
@@ -100,7 +100,7 @@
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(246, 50);
             this.GenerateButton.TabIndex = 6;
-            this.GenerateButton.Text = "Generate";
+            this.GenerateButton.Text = "Generiraj";
             this.GenerateButton.UseVisualStyleBackColor = true;
             this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
@@ -110,7 +110,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(125, 50);
             this.saveButton.TabIndex = 7;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "Spremi";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 

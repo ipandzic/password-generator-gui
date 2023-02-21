@@ -11,7 +11,7 @@ namespace PasswordGenerator
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            bool includeCapitals = false;
+            bool includeLetters = false;
             bool includeNumerals = false;
             bool includeSymbols = false;
             int characterNumber = 8;
@@ -23,7 +23,7 @@ namespace PasswordGenerator
 
             if (checkBoxCaps.Checked)
             {
-                includeCapitals = true;
+                includeLetters = true;
             }
 
             if (checkBoxNums.Checked)
@@ -36,17 +36,17 @@ namespace PasswordGenerator
                 includeSymbols = true;
             }
 
-            PasswordGenerator(characterNumber, includeCapitals, includeNumerals, includeSymbols);
+            PasswordGenerator(characterNumber, includeLetters, includeNumerals, includeSymbols);
 
         }
 
-        public void PasswordGenerator(int len, bool includeCapitals, bool includeNumerals, bool includeSymbols)
+        public void PasswordGenerator(int len, bool includeLetters, bool includeNumerals, bool includeSymbols)
         {
-            string ValidChar = "abcdefghijklmnopqrstuvwxyz";
+            string ValidChar = " ";
 
-            if (includeCapitals == true)
+            if (includeLetters == true)
             {
-                ValidChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                ValidChar += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             }
 
             if (includeNumerals == true)
@@ -56,7 +56,7 @@ namespace PasswordGenerator
 
             if (includeSymbols == true)
             {
-                ValidChar += "~`! @#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
+                ValidChar += "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
             }
 
             StringBuilder result = new StringBuilder();
