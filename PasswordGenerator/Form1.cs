@@ -42,7 +42,7 @@ namespace PasswordGenerator
 
             if (includeLetters == true)
             {
-                ValidChar += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                ValidChar += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             }
 
             if (includeNumerals == true)
