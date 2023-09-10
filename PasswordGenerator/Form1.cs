@@ -38,40 +38,47 @@ namespace PasswordGenerator
 
         public void PasswordGenerator(int len, bool includeLetters, bool includeNumerals, bool includeSymbols)
         {
-            string ValidChar = "";
-
-            if (includeLetters == true)
-            {
-                ValidChar += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            }
-
-            if (includeNumerals == true)
-            {
-                ValidChar += "0123456789";
-            }
-
-            if (includeSymbols == true)
-            {
-                ValidChar += "~`!@#$%^&*()_-+={[}]|\\\\:;\\\"'<,>.?/";
-            }
-
             StringBuilder result = new StringBuilder();
             Random rand = new Random();
-    
-            if (ValidChar.Length > 0)  // Check if ValidChar is not empty
+
+            string letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string numerals = "0123456789";
+            string symbols = "~`!@#$%^&*()_-+={[}]|\\\\:;\\\"'<,>.?/";
+
+            string ValidChar = "";
+
+            if (includeLetters)
             {
-                while (0 < len--)
+                ValidChar += letters;
+                result.Append(letters[rand.Next(letters.Length)]);
+                len--;
+            }
+
+            if (includeNumerals)
+            {
+                ValidChar += numerals;
+                result.Append(numerals[rand.Next(numerals.Length)]);
+                len--;
+            }
+
+            if (includeSymbols)
+            {
+                ValidChar += symbols;
+                result.Append(symbols[rand.Next(symbols.Length)]);
+                len--;
+            }
+
+            if (ValidChar.Length > 0) // Check if ValidChar is not empty
+            {
+                for (int i = 0; i < len; i++)
                 {
                     result.Append(ValidChar[rand.Next(ValidChar.Length)]);
                 }
-                textBox1.Text = result.ToString();
             }
-            else
-            {
-                // Handle the case where ValidChar is empty.
-                // Maybe show a message to the user or set a default character set.
-            }
+
+            textBox1.Text = result.ToString();
         }
+
 
         private void saveButton_Click(object sender, EventArgs e)
         {
