@@ -38,7 +38,7 @@ namespace PasswordGenerator
 
         public void PasswordGenerator(int len, bool includeLetters, bool includeNumerals, bool includeSymbols)
         {
-            string ValidChar = " ";
+            string ValidChar = "";
 
             if (includeLetters == true)
             {
@@ -52,17 +52,25 @@ namespace PasswordGenerator
 
             if (includeSymbols == true)
             {
-                ValidChar += "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
+                ValidChar += "~`!@#$%^&*()_-+={[}]|\\\\:;\\\"'<,>.?/";
             }
 
             StringBuilder result = new StringBuilder();
             Random rand = new Random();
-            while (0 < len--)
+    
+            if (ValidChar.Length > 0)  // Check if ValidChar is not empty
             {
-                result.Append(ValidChar[rand.Next(ValidChar.Length)]);
-
+                while (0 < len--)
+                {
+                    result.Append(ValidChar[rand.Next(ValidChar.Length)]);
+                }
+                textBox1.Text = result.ToString();
             }
-            textBox1.Text = result.ToString();
+            else
+            {
+                // Handle the case where ValidChar is empty.
+                // Maybe show a message to the user or set a default character set.
+            }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
