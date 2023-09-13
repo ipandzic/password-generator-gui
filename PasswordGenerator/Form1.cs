@@ -43,7 +43,7 @@ namespace PasswordGenerator
 
             string letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string numerals = "0123456789";
-            string symbols = "~`!@#$%^&*()_-+={[}]|\\\\:;\\\"'<,>.?/";
+            string symbols = "~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
 
             string ValidChar = "";
 
@@ -68,7 +68,7 @@ namespace PasswordGenerator
                 len--;
             }
 
-            if (ValidChar.Length > 0) // Check if ValidChar is not empty
+            if (ValidChar.Length > 0)
             {
                 for (int i = 0; i < len; i++)
                 {
@@ -78,7 +78,6 @@ namespace PasswordGenerator
 
             textBox1.Text = result.ToString();
         }
-
 
         private void saveButton_Click(object sender, EventArgs e)
         {
